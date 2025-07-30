@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner compras = new Scanner(System.in);
+        int quantidade = compras.nextInt();
+
+
+        Scanner valor1 = new Scanner(System.in);
+        valor1.useLocale(Locale.US);
+        double preco1 = valor1.nextDouble();
+        Scanner valor2 = new Scanner(System.in);
+        valor2.useLocale(Locale.US);
+        double preco2 = valor2.nextDouble();
+        Scanner valor3 = new Scanner(System.in);
+        valor2.useLocale(Locale.US);
+        double preco3 = valor3.nextDouble();
+
+        if (quantidade == 0){
+            System.out.println("nenhuma compra registrada");
+        return;
+        }
+        double soma = (preco1 +preco2 + preco3);
+        System.out.printf("%.2f%n", soma);
+        double media = (preco1 + preco2 + preco3)/quantidade;
+        System.out.printf("%.2f%n", media);
+
+        compras.close();
+    }
+}
